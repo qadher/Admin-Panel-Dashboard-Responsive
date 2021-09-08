@@ -1,5 +1,7 @@
 import 'package:admin_panel_dashboard/constants.dart';
 import 'package:admin_panel_dashboard/screens/dashboard/components/header.dart';
+import 'package:admin_panel_dashboard/screens/dashboard/components/my_files.dart';
+import 'package:admin_panel_dashboard/screens/dashboard/components/recent_files.dart';
 import 'package:admin_panel_dashboard/screens/dashboard/components/storage_details.dart';
 import 'package:flutter/material.dart';
 
@@ -24,11 +26,11 @@ class DashboardScreen extends StatelessWidget {
                 flex: 5,
                 child: Column(
                   children: [
-                    Row(
-                      children: [
-                        
-                      ],
-                    )
+                    MyFiles(),
+                    SizedBox(
+                      height: defaultPadding,
+                    ),
+                    RecentFiles(),
                   ],
                 ),
               ),
@@ -46,3 +48,4 @@ class DashboardScreen extends StatelessWidget {
     ));
   }
 }
+
